@@ -6,8 +6,51 @@
 
 html {
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80vw;
+    height: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fortune-cookie {
+    text-align: center;
+    background-color: #666;
+    width: 600px;
+    height: 600px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#right {
+    background-color: #DAA436;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin-left: 5px;
+    border-radius: 87% 6% 94% 13% / 50% 50% 70% 30%;
+}
+
+#left {
+    background-color: #DAA436;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin-right: 5px;
+    border-radius: 50% 50% 70% 30% / 87% 6% 94% 13% ;
 }
 
 button {
     font-family: inherit;
+    width: 200px;
 }
