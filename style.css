@@ -10,11 +10,12 @@ html {
     justify-content: center;
     align-content: center;
     height: 100vh;
+    background-color: #B191FF;
 }
 
 .container {
     width: 80vw;
-    height: 80vw;
+    height: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,8 +25,8 @@ html {
 .fortune-cookie {
     text-align: center;
     background-color: #666;
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 350px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -37,7 +38,7 @@ html {
     width: 200px;
     height: 200px;
     border: 2px solid black;
-    margin-left: 5px;
+    /* margin-left: 5px; */
     border-radius: 32% 68% 30% 70% / 0% 89% 11% 100%;
 }
 
@@ -46,11 +47,28 @@ html {
     width: 200px;
     height: 200px;
     border: 2px solid black;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     border-radius: 75% 25% 69% 31% / 84% 0% 100% 16%;
+}
+
+.advice {
+    width: 500px;
+    height: 50px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fortune-text {
+    
 }
 
 button {
     font-family: inherit;
-    width: 200px;
+    font-size: 25px;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
 }
