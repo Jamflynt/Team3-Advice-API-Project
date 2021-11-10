@@ -1,0 +1,11 @@
+Ask the user a question when you log onto the page:
+
+"When life deals you a bad hand and you need words of wisdom... just press the button"
+
+Style button to say something - Fortune cookie related
+Maybe style the div that way
+
+Style page after presenting advice.
+
+
+
