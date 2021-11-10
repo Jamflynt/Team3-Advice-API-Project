@@ -7,5 +7,6 @@ Maybe style the div that way
 
 Style page after presenting advice.
 
+Font Style - Courier for fortune cookie
 
 
