@@ -38,7 +38,7 @@ html {
     height: 200px;
     border: 2px solid black;
     margin-left: 5px;
-    border-radius: 87% 6% 94% 13% / 50% 50% 70% 30%;
+    border-radius: 32% 68% 30% 70% / 0% 89% 11% 100%;
 }
 
 #left {
@@ -47,7 +47,7 @@ html {
     height: 200px;
     border: 2px solid black;
     margin-right: 5px;
-    border-radius: 50% 50% 70% 30% / 87% 6% 94% 13% ;
+    border-radius: 75% 25% 69% 31% / 84% 0% 100% 16%;
 }
 
 button {
