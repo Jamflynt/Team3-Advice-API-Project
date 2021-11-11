@@ -11,3 +11,13 @@ async function randAdvice(){
     }
 }
 randAdvice();
+
+const fortuneCookie = document.querySelector(`.fortune-cookie`)
+const fortuneRight = document.querySelector(`.right`)
+const fortuneLeft = document.querySelector(`.left`)
+
+
+fortuneCookie.addEventListener(`click`, () => {
+    fortuneRight.classList.toggle(`right-open`);
+    fortuneLeft.classList.toggle(`left-open`);
+})
