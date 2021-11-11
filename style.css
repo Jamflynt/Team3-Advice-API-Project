@@ -31,6 +31,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .right {
@@ -68,7 +69,7 @@ html {
 }
 
 .advice {
-    width: 500px;
+    width: 600px;
     height: 50px;
     background-color: #fff;
     margin-bottom: 10px;
@@ -78,13 +79,13 @@ html {
 }
 
 .fortune-text {
-    
+    margin: 40px;
 }
 
 button {
     font-family: inherit;
-    font-size: 25px;
-    width: 300px;
+    font-size: 20px;
+    width: 400px;
     height: 50px;
     cursor: pointer;
 }
