@@ -10,7 +10,7 @@ html {
     justify-content: center;
     align-content: center;
     /* height: 100vh; */
-    background-color: #B191FF;
+    background-color: #000;
 }
 
 .container {
@@ -23,6 +23,7 @@ html {
 }
 
 .container h1 {
+    color: #fff;
     margin-bottom: 10px;
     width: 800px;
     text-align: center;
@@ -36,7 +37,6 @@ html {
 
 .container hr {
     width: 600px;
-    
 }
 
 .fortune-cookie {
@@ -100,6 +100,12 @@ html {
 
 .fortune-text {
     margin: 10px;
+    font-weight: bold;
+    color: blue;
+}
+
+.lucky-numbers {
+    color: blue;
 }
 
 button {
