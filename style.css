@@ -29,14 +29,23 @@ html {
 }
 
 .container .larger {
+    margin-top: 10px;
     font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.container hr {
+    width: 600px;
+    
 }
 
 .fortune-cookie {
     text-align: center;
-    background-color: #666;
-    width: 450px;
-    height: 350px;
+    background-image: url(images/fortunecookiebackground3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 500px;
+    height: 500px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -86,6 +95,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.advice::before {
+    
 }
 
 .fortune-text {
