@@ -87,8 +87,6 @@ html {
     transition: margin-right 0.5s linear;
 }
 
-
-
 .advice {
     width: 600px;
     height: 100px;
@@ -101,7 +99,7 @@ html {
 }
 
 .fortune-text {
-    /* margin: 40px; */
+    margin: 10px;
 }
 
 button {
