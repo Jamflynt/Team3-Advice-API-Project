@@ -36,6 +36,7 @@ fortuneCookie.addEventListener(`click`, () => {
     fortuneLeft.classList.add(`left-open`);
     randAdvice();
     yourLuckyNums();
+
 })
 
 
