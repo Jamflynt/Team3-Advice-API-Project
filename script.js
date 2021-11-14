@@ -26,3 +26,11 @@ fortuneCookie.addEventListener(`click`, () => {
     randAdvice();
     fortuneCookie.removeEventListener(`click`);
 })
+
+const reset = document.querySelector(`button`)
+
+reset.addEventListener(`click`, () => {
+    fortuneRight.classList.remove(`right-open`);
+    fortuneLeft.classList.remove(`left-open`);
+    adviceLoc.innerText = "";
+})
