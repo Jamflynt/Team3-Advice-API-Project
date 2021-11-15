@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #000;
+}
+
+.container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container h1 {
+    color: #fff;
+    margin-bottom: 10px;
+    width: 800px;
+    text-align: center;
+}
+
+.container .larger {
+    margin-top: 10px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.container hr {
+    width: 600px;
+}
+
+.fortune-cookie {
+    text-align: center;
+    background-image: url(images/fortunecookiebackground3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right {
+    background-color: #DAA436;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 32% 68% 30% 70% / 0% 89% 11% 100%;
+    margin-left: -45px;
+    transform: rotate(15deg);
+}
+
+.right.right-open {
+    transform: rotate(0deg);
+    margin-left: 0px;
+    transition: transform 0.5s linear;
+    transition: margin-left 0.5s linear;
+}
+
+.left {
+    background-color: #DAA436;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 75% 25% 69% 31% / 84% 0% 100% 16%;
+    margin-right: -45px;
+    transform: rotate(-15deg);
+}
+
+.left.left-open {
+    transform: rotate(0deg);
+    margin-right: 0px;
+    transition: transform 0.5s linear;
+    transition: margin-right 0.5s linear;
+}
+
+.advice {
+    width: 600px;
+    height: 100px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fortune-text {
+    margin: 10px;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+.lucky-numbers {
+    color: blue;
+}
+
+button {
+    font-family: inherit;
+    border-radius: 25px;
+    font-size: 20px;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+}
