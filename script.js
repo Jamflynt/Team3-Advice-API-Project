@@ -59,8 +59,6 @@ let search;
 async function searchAdvice() {
     const fullURL = `https://api.adviceslip.com/advice/search/${search}`;
     const searchResultDiv = document.querySelector(`.search-fortune-text`);
-    // resultDiv.classList.add(`result`)
-    // form.append(resultDiv);
     try {
         console.log(`Searching Advice GET Successful`);
         const response = await axios.get(fullURL);
