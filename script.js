@@ -49,3 +49,44 @@ reset.addEventListener(`click`, () => {
     luckyNum.innerText = "";
 })
 
+
+// Search Function
+let search;
+async function searchAdvice() {
+    const fullURL = `https://api.adviceslip.com/advice/search/${search}`;
+    const searchResultDiv = document.querySelector(`.search-fortune-text`);
+    // resultDiv.classList.add(`result`)
+    // form.append(resultDiv);
+    try {
+        console.log(`Searching Advice GET Successful`);
+        const response = await axios.get(fullURL);
+        console.log(response.data);
+        const items = response.data.slips;
+        console.log(response.data.slips);
+        searchResultDiv.innerText = response.data.slips[Math.floor(Math.random()*items.length)].advice;
+        // Returns random index if there is more than one
+        
+    } catch (err){
+        console.log(`Searching Advice Failed to GET`);
+        console.log(err);
+        searchResultDiv.innerText = `Nothing to find here, try searching again`
+    }
+}
+
+const form = document.querySelector(`form`)
+form.addEventListener(`submit`, (s) => {
+    s.preventDefault();
+    const searchParam = document.querySelector(`input`);
+    search = searchParam.value;
+    searchAdvice();
+    searchYourLuckyNums();
+    searchParam.value = ``;
+});
+
+// Search lucky numbers
+const searchLuckyNum = document.querySelector(`.search-lucky-numbers`)
+function searchYourLuckyNums(){
+    setTimeout(() => {
+        searchLuckyNum.innerText = yourNums;
+    }, 440)
+}

@@ -155,7 +155,8 @@ html {
 }
 
 .output-here {
-    color: #fff;
+    margin-top: 20px;
+    color: blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
