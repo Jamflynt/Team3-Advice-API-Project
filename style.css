@@ -222,16 +222,6 @@ html {
 
 @media screen and (max-width: 768px) {
     .container {
-        margin-top: 25px;
-    }
-
-    .container .larger {
-        letter-spacing: 2px;
-    }
-
-}
-@media screen and (max-width: 375px) {
-    .container {
         height: 700px;
         margin-top: 10px;
     }
