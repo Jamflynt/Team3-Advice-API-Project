@@ -131,12 +131,15 @@ html {
     color: #fff;
 }
 
+#search h3 {
+    color: #fff;
+}
+
 #searchForm {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 50vw; */
 }
 
 #searchForm .input {
@@ -161,4 +164,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.search-fortune-text {
+    text-align: center;
 }
