@@ -109,7 +109,7 @@ html {
     color: blue;
 }
 
-button {
+.fortune {
     font-family: inherit;
     border-radius: 25px;
     font-size: 20px;
