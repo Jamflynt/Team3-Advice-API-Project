@@ -7,13 +7,14 @@
 html {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: #000;
 }
 
 .container {
-    width: 80vw;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
