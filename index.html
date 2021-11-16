@@ -18,7 +18,7 @@
         <h1>Life deal you a bad hand? </h1>
         <h1>Do you need words of wisdom? </h1>
         <hr>
-        <h1 class="larger">Click the Cookie</h1>
+        <h1 class="larger">Click the Cookie or <a class="link" href="#search">Search</a></h1>
         <div class="fortune-cookie">
             <div class="left"></div>
             <div class="right"></div>
@@ -30,16 +30,19 @@
         </div>
         <button class="fortune">Reset for New Fortune</button>
     </div>
-    <form id="search">
+    <div id="search">
+    <h1>Didn't find what you were looking for? Try searching for advice</h1>
+    <form id="searchForm">
         <input class="input" type="text" placeholder="Search...">
         <button class="btn" type="submit">
             <i class="fas fa-search"></i>
         </button>
+        <div class="output-here">
+    
+        </div>
     </form>
+</div>
 
-    <div class="output-here">
-
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>

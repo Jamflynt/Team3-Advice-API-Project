@@ -117,3 +117,46 @@ html {
     height: 50px;
     cursor: pointer;
 }
+
+#search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#search h1 {
+    color: #fff;
+}
+
+#searchForm {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 50vw; */
+}
+
+#searchForm .input {
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+#searchForm .btn {
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border: none;
+    font-size: 18px;
+}
+
+.output-here {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
