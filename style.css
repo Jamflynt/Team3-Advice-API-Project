@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -27,6 +28,11 @@ html {
     margin-bottom: 10px;
     width: 800px;
     text-align: center;
+}
+
+.container .link {
+    color: #fff;
+    font-style: italic;
 }
 
 .container .larger {
@@ -64,6 +70,12 @@ html {
     transform: rotate(15deg);
 }
 
+.right-animation {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: wiggle-right;
+}
+
 .right.right-open {
     transform: rotate(0deg);
     margin-left: 0px;
@@ -79,6 +91,12 @@ html {
     border-radius: 75% 25% 69% 31% / 84% 0% 100% 16%;
     margin-right: -45px;
     transform: rotate(-15deg);
+}
+
+.left-animation {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: wiggle-left;
 }
 
 .left.left-open {
@@ -143,18 +161,18 @@ html {
 }
 
 #searchForm .input {
-    width: 300px;
-    height: 30px;
-    font-size: 18px;
+    width: 500px;
+    height: 50px;
+    font-size: 24px;
     margin: 0 5px;
 }
 
 #searchForm .btn {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     background-color: red;
     border: none;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .output-here {
@@ -168,4 +186,33 @@ html {
 
 .search-fortune-text {
     text-align: center;
+}
+
+@keyframes wiggle-left {
+    from {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(-15deg);
+    }
+    
+}
+@keyframes wiggle-right {
+    from {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(15deg);
+    }
+    
 }

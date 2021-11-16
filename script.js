@@ -34,6 +34,8 @@ const fortuneLeft = document.querySelector(`.left`)
 fortuneCookie.addEventListener(`click`, () => {
     fortuneRight.classList.add(`right-open`);
     fortuneLeft.classList.add(`left-open`);
+    fortuneRight.classList.remove(`right-animation`)
+    fortuneLeft.classList.remove(`left-animation`)
     randAdvice();
     yourLuckyNums();
 
@@ -45,6 +47,8 @@ const reset = document.querySelector(`button`)
 reset.addEventListener(`click`, () => {
     fortuneRight.classList.remove(`right-open`);
     fortuneLeft.classList.remove(`left-open`);
+    fortuneRight.classList.add(`right-animation`)
+    fortuneLeft.classList.add(`left-animation`)
     adviceLoc.innerText = "";
     luckyNum.innerText = "";
 })
