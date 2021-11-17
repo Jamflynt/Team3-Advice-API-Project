@@ -34,6 +34,8 @@ const fortuneLeft = document.querySelector(`.left`)
 fortuneCookie.addEventListener(`click`, () => {
     fortuneRight.classList.add(`right-open`);
     fortuneLeft.classList.add(`left-open`);
+    fortuneRight.classList.remove(`right-animation`)
+    fortuneLeft.classList.remove(`left-animation`)
     randAdvice();
     yourLuckyNums();
 
@@ -45,7 +47,48 @@ const reset = document.querySelector(`button`)
 reset.addEventListener(`click`, () => {
     fortuneRight.classList.remove(`right-open`);
     fortuneLeft.classList.remove(`left-open`);
+    fortuneRight.classList.add(`right-animation`)
+    fortuneLeft.classList.add(`left-animation`)
     adviceLoc.innerText = "";
     luckyNum.innerText = "";
 })
 
+
+// Search Function
+let search;
+async function searchAdvice() {
+    const fullURL = `https://api.adviceslip.com/advice/search/${search}`;
+    const searchResultDiv = document.querySelector(`.search-fortune-text`);
+    try {
+        console.log(`Searching Advice GET Successful`);
+        const response = await axios.get(fullURL);
+        console.log(response.data);
+        const items = response.data.slips;
+        console.log(response.data.slips);
+        searchResultDiv.innerText = response.data.slips[Math.floor(Math.random()*items.length)].advice;
+        // Returns random index if there is more than one
+        
+    } catch (err){
+        console.log(`Searching Advice Failed to GET`);
+        console.log(err);
+        searchResultDiv.innerText = `Nothing to find here, try searching again`
+    }
+}
+
+const form = document.querySelector(`form`)
+form.addEventListener(`submit`, (s) => {
+    s.preventDefault();
+    const searchParam = document.querySelector(`input`);
+    search = searchParam.value;
+    searchAdvice();
+    searchYourLuckyNums();
+    searchParam.value = ``;
+});
+
+// Search lucky numbers
+const searchLuckyNum = document.querySelector(`.search-lucky-numbers`)
+function searchYourLuckyNums(){
+    setTimeout(() => {
+        searchLuckyNum.innerText = yourNums;
+    }, 440)
+}

@@ -8,6 +8,7 @@
     <meta name="description" content="Team 3 API Project - Fortune Cookie">
     <meta name="Authors"
         content="Maurice Collier, Jonathan Mitchell, Maribeth Calipo, Victoria Conlin, and Jamie Flynt">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Team 3 API Project - Fortune Cookie</title>
 </head>
@@ -17,11 +18,11 @@
         <h1>Life deal you a bad hand? </h1>
         <h1>Do you need words of wisdom? </h1>
         <hr>
-        <h1 class="larger">Click the Cookie</h1>
+        <h1 class="larger">Click the Cookie or <a class="link" href="#search">Search</a></h1>
         <div class="fortune-cookie">
-            <div class="left"></div>
-            <div class="right"></div>
-            <!-- <div class="tag"></div> -->
+            <div class="left left-animation"></div>
+            <div class="right right-animation"></div>
+            <div class="tag"></div>
         </div>
         <div class="advice">
             <p class="fortune-text"></p>
@@ -29,9 +30,23 @@
         </div>
         <button class="fortune">Reset for New Fortune</button>
     </div>
-    <div class="search">
-        
+    <div id="search">
+    <h1>Didn't find what you were looking for? Try searching for advice!</h1>
+    <h3>Please search for a single word only </h3>
+    <form id="searchForm">
+        <input class="input" type="text" placeholder="Search..." style="text-align: center;">
+        <button class="btn" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+    <div class="output-here">
+        <div class="advice">
+            <p class="search-fortune-text"></p>
+            <p class="search-lucky-numbers"></p>
+        </div>
     </div>
+</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>

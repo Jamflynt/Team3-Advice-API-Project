@@ -2,18 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: #000;
 }
 
 .container {
-    width: 80vw;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,6 +28,12 @@ html {
     margin-bottom: 10px;
     width: 800px;
     text-align: center;
+}
+
+.container .link {
+    color: #fff;
+    font-style: italic;
+    cursor: pointer;
 }
 
 .container .larger {
@@ -63,6 +71,12 @@ html {
     transform: rotate(15deg);
 }
 
+.right-animation {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: wiggle-right;
+}
+
 .right.right-open {
     transform: rotate(0deg);
     margin-left: 0px;
@@ -78,6 +92,12 @@ html {
     border-radius: 75% 25% 69% 31% / 84% 0% 100% 16%;
     margin-right: -45px;
     transform: rotate(-15deg);
+}
+
+.left-animation {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: wiggle-left;
 }
 
 .left.left-open {
@@ -109,7 +129,7 @@ html {
     color: blue;
 }
 
-button {
+.fortune {
     font-family: inherit;
     border-radius: 25px;
     font-size: 20px;
@@ -117,3 +137,180 @@ button {
     height: 50px;
     cursor: pointer;
 }
+
+#search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#search h1 {
+    color: #fff;
+    text-align: center;
+}
+
+#search h3 {
+    color: #fff;
+}
+
+#searchForm {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm .input {
+    width: 500px;
+    height: 50px;
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+#searchForm .btn {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border: none;
+    font-size: 24px;
+}
+
+.output-here {
+    margin-top: 20px;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-fortune-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes wiggle-left {
+    from {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(-15deg);
+    }
+    
+}
+@keyframes wiggle-right {
+    from {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(15deg);
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 700px;
+        margin-top: 10px;
+    }
+    
+    .container h1 {
+        margin-bottom: 10px;
+        width: 350px;
+        font-size: 20px;
+    }
+    
+    .container .larger {
+        font-size: 22px;
+        letter-spacing: 2.5px;
+    }
+    
+    .container hr {
+        width: 350px;
+    }
+    
+    .fortune-cookie {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .right {
+        width: 150px;
+        height: 150px;
+        margin-left: -30px;
+    }
+    
+    .left {
+        width: 150px;
+        height: 150px;
+        margin-right: -30px;
+    }
+    
+    .advice {
+        width: 350px;
+        height: 100px;
+    }
+    
+    .fortune {
+        border-radius: 10px;
+        font-size: 16px;
+        width: 250px;
+        height: 40px;
+    }
+    
+    #search {
+        height: 400px;
+        width: 350px;
+    }
+    
+    #search h1 {
+        font-size: 20px;
+    }
+    
+    #search h3 {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    #searchForm {
+        margin-top: 10px;
+    }
+    
+    #searchForm .input {
+        width: 250px;
+        height: 25px;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    
+    #searchForm .btn {
+        height: 25px;
+        width: 25px;
+        font-size: 18px;
+    }
+    
+    .output-here {
+        margin-top: 20px;
+    }
+    
+    .search-fortune-text {
+        text-align: center;
+        font-weight: bold;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+}
+
